@@ -1,0 +1,282 @@
+
+==================== FINAL INTERFACE ====================
+2016-11-11 16:33:00.646093 UTC
+
+interface main@main:Signal 8001
+  interface hash: 33ab51d2db0a9b05df41eb4644cebdbc
+  ABI hash: 36e4326620f706619c90ca6d3e945f05
+  export-list hash: e3576e45d05059d4e39842e708f127b6
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 995a5ce452f5ac0b0a01a57b68a9fbe3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Signal.mapT
+  Signal.sample
+  Signal.timeS
+  Signal.Signal
+  Signal.Time
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Control.Monad 7767aebfd53f0b584cef2fe66ad3986c
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+e73cc68dc90bb2e98df63201951ac43a
+  $fApplicativeSignal :: GHC.Base.Applicative Signal.Signal
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Signal.Signal
+                  Signal.$fApplicativeSignal_$cp1Applicative
+                  Signal.$fApplicativeSignal_$cpure
+                  Signal.$fApplicativeSignal_$c<*>
+                  Signal.$fApplicativeSignal_$c*>
+                  Signal.$fApplicativeSignal_$c<* -}
+e73cc68dc90bb2e98df63201951ac43a
+  $fApplicativeSignal1 ::
+    Signal.Signal a -> Signal.Signal b -> Signal.Time -> a
+  {- Arity: 3, HasNoCafRefs, Strictness: <C(S),1*C1(U)><L,A><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a
+                   @ b
+                   (eta :: Signal.Signal a)
+                   (eta1 :: Signal.Signal b)
+                   (eta2 :: Signal.Time) ->
+                 eta `cast` (Signal.N:Signal[0] <a>_N) eta2) -}
+e73cc68dc90bb2e98df63201951ac43a
+  $fApplicativeSignal2 ::
+    Signal.Signal a -> Signal.Signal b -> Signal.Time -> b
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a
+                   @ b
+                   (eta :: Signal.Signal a)
+                   (eta1 :: Signal.Signal b)
+                   (eta2 :: Signal.Time) ->
+                 eta1 `cast` (Signal.N:Signal[0] <b>_N) eta2) -}
+e73cc68dc90bb2e98df63201951ac43a
+  $fApplicativeSignal3 ::
+    Signal.Signal (a -> b) -> Signal.Signal a -> Signal.Time -> b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(C(S)),1*C1(C1(U))><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   (fs :: Signal.Signal (a -> b))
+                   (xs :: Signal.Signal a)
+                   (t :: Signal.Time) ->
+                 fs `cast` (Signal.N:Signal[0] <a -> b>_N)
+                   t
+                   (xs `cast` (Signal.N:Signal[0] <a>_N) t)) -}
+43b0b4b180af8ae0b48d49205206b0e0
+  $fApplicativeSignal4 :: a -> Signal.Time -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a (x :: a) (ds :: Signal.Time) -> x) -}
+e73cc68dc90bb2e98df63201951ac43a
+  $fApplicativeSignal_$c*> ::
+    Signal.Signal a -> Signal.Signal b -> Signal.Signal b
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Signal.$fApplicativeSignal2
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <Signal.Signal a>_R
+                 ->_R <Signal.Signal b>_R
+                 ->_R Sym (Signal.N:Signal[0]) <b>_N) -}
+e73cc68dc90bb2e98df63201951ac43a
+  $fApplicativeSignal_$c<* ::
+    Signal.Signal a -> Signal.Signal b -> Signal.Signal a
+  {- Arity: 3, HasNoCafRefs, Strictness: <C(S),1*C1(U)><L,A><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Signal.$fApplicativeSignal1
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <Signal.Signal a>_R
+                 ->_R <Signal.Signal b>_R
+                 ->_R Sym (Signal.N:Signal[0]) <a>_N) -}
+e73cc68dc90bb2e98df63201951ac43a
+  $fApplicativeSignal_$c<*> ::
+    Signal.Signal (a -> b) -> Signal.Signal a -> Signal.Signal b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(C(S)),1*C1(C1(U))><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Signal.$fApplicativeSignal3
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <Signal.Signal (a -> b)>_R
+                 ->_R <Signal.Signal a>_R
+                 ->_R Sym (Signal.N:Signal[0]) <b>_N) -}
+e73cc68dc90bb2e98df63201951ac43a
+  $fApplicativeSignal_$cp1Applicative ::
+    GHC.Base.Functor Signal.Signal
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Signal.$fFunctorSignal -}
+e73cc68dc90bb2e98df63201951ac43a
+  $fApplicativeSignal_$cpure :: a -> Signal.Signal a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Signal.$fApplicativeSignal4
+                  `cast`
+                (forall (a :: <*>_N). <a>_R ->_R Sym (Signal.N:Signal[0]) <a>_N) -}
+e73cc68dc90bb2e98df63201951ac43a
+  $fFunctorSignal :: GHC.Base.Functor Signal.Signal
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Signal.Signal
+                  Signal.$fFunctorSignal_$cfmap
+                  Signal.$fFunctorSignal_$c<$ -}
+e73cc68dc90bb2e98df63201951ac43a
+  $fFunctorSignal1 :: a -> Signal.Signal b -> Signal.Time -> a
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,1*U><L,A><L,A>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a
+                   @ b
+                   (eta :: a)
+                   (xs :: Signal.Signal b)
+                   (eta1 :: Signal.Time) ->
+                 eta) -}
+e73cc68dc90bb2e98df63201951ac43a
+  $fFunctorSignal2 :: (a -> b) -> Signal.Signal a -> Signal.Time -> b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   (f :: a -> b)
+                   (xs :: Signal.Signal a)
+                   (eta :: Signal.Time) ->
+                 f (xs `cast` (Signal.N:Signal[0] <a>_N) eta)) -}
+e73cc68dc90bb2e98df63201951ac43a
+  $fFunctorSignal_$c<$ :: a -> Signal.Signal b -> Signal.Signal a
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,1*U><L,A><L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Signal.$fFunctorSignal1
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <a>_R
+                 ->_R <Signal.Signal b>_R
+                 ->_R Sym (Signal.N:Signal[0]) <a>_N) -}
+e73cc68dc90bb2e98df63201951ac43a
+  $fFunctorSignal_$cfmap ::
+    (a -> b) -> Signal.Signal a -> Signal.Signal b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Signal.$fFunctorSignal2
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <a -> b>_R
+                 ->_R <Signal.Signal a>_R
+                 ->_R Sym (Signal.N:Signal[0]) <b>_N) -}
+a9feedbd9ab2f5b84d45505b3cdf8f44
+  $tc'Signal :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16460378832762111461##
+                   11944304677081145148##
+                   Signal.$trModule
+                   Signal.$tc'Signal1) -}
+6047f50ab5d8f55e5a43d5f8993e8cb3
+  $tc'Signal1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Signal"#) -}
+95232216b5278ea6b024a6b94fc67dc3
+  $tcSignal :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15285893991788110796##
+                   2861504126629731351##
+                   Signal.$trModule
+                   Signal.$trModule1) -}
+67e24bdf3b7bc2b91d8e0bc25f78e8cc
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Signal.$trModule2
+                   Signal.$trModule1) -}
+fddd0f9b98371eec5befd500f4709ab7
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Signal"#) -}
+b87d7e76c1b675d24235232a7ab18a5d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+e73cc68dc90bb2e98df63201951ac43a
+  newtype Signal a = Signal {at :: Signal.Time -> a}
+6de611a6573e938284c52c1e375785ec
+  type Time = GHC.Types.Double
+551da50b0cbfdbf2a0d48e3e8d241e70
+  at :: Signal.Signal a -> Signal.Time -> a
+  RecSel Left Signal.Signal
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Signal.at1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Signal.Signal a>_R ->_R Signal.N:Signal[0] <a>_N) -}
+55d54e94e41ef971253ff5513487f568
+  at1 :: Signal.Signal a -> Signal.Signal a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a (ds :: Signal.Signal a) -> ds) -}
+80a25bbd9aea376306799101ae3b4b14
+  mapT ::
+    (Signal.Time -> Signal.Time) -> Signal.Signal a -> Signal.Signal a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*C1(U)><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Signal.mapT1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Signal.Time -> Signal.Time>_R
+                 ->_R <Signal.Signal a>_R
+                 ->_R Sym (Signal.N:Signal[0]) <a>_N) -}
+7f6c444b6e3e1647d33ac1834bd93dcf
+  mapT1 ::
+    (Signal.Time -> Signal.Time) -> Signal.Signal a -> Signal.Time -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*C1(U)><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (f :: Signal.Time -> Signal.Time)
+                   (xs :: Signal.Signal a)
+                   (t :: Signal.Time) ->
+                 xs `cast` (Signal.N:Signal[0] <a>_N) (f t)) -}
+67e8647b75de67d4633d7818961bff9f
+  sample :: Signal.Signal a -> Signal.Time -> a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Signal.at1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Signal.Signal a>_R ->_R Signal.N:Signal[0] <a>_N) -}
+292948fad36ba5947ae0edc3233045eb
+  timeS :: Signal.Signal Signal.Time
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                (GHC.Base.id @ GHC.Types.Double)
+                  `cast`
+                (Sym (Signal.N:Signal[0]) <GHC.Types.Double>_N) -}
+instance [safe] GHC.Base.Applicative [Signal.Signal]
+  = Signal.$fApplicativeSignal
+instance [safe] GHC.Base.Functor [Signal.Signal]
+  = Signal.$fFunctorSignal
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

@@ -1,0 +1,194 @@
+
+==================== FINAL INTERFACE ====================
+2016-11-11 16:54:41.923302 UTC
+
+interface main@main:Animate 8001
+  interface hash: 3d6bcb5f0482f14d86a884cab7dfdb7a
+  ABI hash: 785b9f8df392fea7550ee07935d80690
+  export-list hash: 5d0d734e8a972508a93a3623c9337d74
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 995a5ce452f5ac0b0a01a57b68a9fbe3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Animate.animate
+module dependencies: Ansi Render Shapes Signal
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.0.0*
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 time-1.6.0.1@time-1.6.0.1
+                      unix-2.7.2.0@unix-2.7.2.0
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:GHC.Real 08bf4acb5f2508f89d6fbcd57fe232e9
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  Ansi aa41b7576783b6f26dc4ff0677527cef
+  exports: 07ee948a2c7e66974c9bb24793e9c44a
+  cls 5565529d0651e0fc65c2a18ddccf061d
+import  -/  Render 3ad7108d30c91fe70eb9ed6283bcfa63
+  exports: 42196c7712c814c6bac2d5299bac88ac
+  Window d6bfe56dc087dabdc08e5f559a1c3bbe
+  render f05c7e2f2e4c2c9ce75652432e1bb229
+  samples abe634259d5a5b0e18f8460c89954eb5
+import  -/  Shapes 3fb2f51359da3b7f3d9fe72698b76353
+  exports: 86eff6cedd199d63d8d2bc7976a8b0bf
+  Drawing ab30969f58343d5089d647f1b92373e0
+import  -/  Signal 36e4326620f706619c90ca6d3e945f05
+  exports: e3576e45d05059d4e39842e708f127b6
+  Signal e73cc68dc90bb2e98df63201951ac43a
+  Time 6de611a6573e938284c52c1e375785ec
+  sample 67e8647b75de67d4633d7818961bff9f
+import  -/  unix-2.7.2.0@unix-2.7.2.0:System.Posix 5b9447f37b6e2292528ff9c2e4047e74
+import  -/  unix-2.7.2.0@unix-2.7.2.0:System.Posix.Unistd 896ecd0c6dbcacedacb9aad2fd95cb18
+bf6c16ef1ea62033905edf3a3bff9b4a
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Animate.$trModule2
+                   Animate.$trModule1) -}
+c4678bbb12d524fc43bbe4e092557d69
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Animate"#) -}
+dcaf85b6d84e71a1c000564639db8766
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+b8e0c9a5fa53922b9739a2b6b13f43b4
+  $wanimate ::
+    Render.Window
+    -> GHC.Prim.Double#
+    -> GHC.Prim.Double#
+    -> Signal.Signal Shapes.Drawing
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5,
+     Strictness: <L,U(U(U(U),U(U)),U(U(U),U(U)),U(U(U),U(U)))><S,U><S,U><L,C(U)><L,U>,
+     Inline: [0],
+     Unfolding: (\ (w :: Render.Window)
+                   (ww :: GHC.Prim.Double#)
+                   (ww1 :: GHC.Prim.Double#)
+                   (w1 :: Signal.Signal Shapes.Drawing)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case {__pkg_ccall base-4.9.0.0 rintDouble GHC.Prim.Double#
+                                                           -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                           -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                                 GHC.Prim.Double# #)}
+                        (GHC.Prim.*## (GHC.Prim.-## ww1 ww) 10.0##)
+                        GHC.Prim.realWorld# of wild { (#,#) ds2 ds3 ->
+                 let {
+                   ww2 :: GHC.Prim.Int# = GHC.Prim.double2Int# ds3
+                 } in
+                 letrec {
+                   go :: [GHC.Types.Double]
+                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                         -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 2, Strictness: <S,1*U><S,U> -}
+                   = \ (ds :: [GHC.Types.Double])
+                       (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case ds of wild1 {
+                       [] -> (# eta, GHC.Tuple.() #)
+                       : y ys
+                       -> case GHC.IO.Handle.Text.hPutStr2
+                                 GHC.IO.Handle.FD.stdout
+                                 Animate.animate3
+                                 GHC.Types.False
+                                 eta of ds1 { (#,#) ipv ipv1 ->
+                          case w of ww3 { Render.Window ww4 ww5 ww6 ->
+                          case ww6 of ww7 { (,) ww8 ww9 ->
+                          case ww9 of ww10 { GHC.Types.I# ww11 ->
+                          case (Render.$wrender
+                                  ww4
+                                  ww5
+                                  ww8
+                                  ww11
+                                  (w1 `cast` (Signal.N:Signal[0] <Shapes.Drawing>_N) y))
+                                 `cast`
+                               (GHC.Types.N:IO[0] <()>_R)
+                                 ipv of ds4 { (#,#) ipv2 ipv3 ->
+                          case System.Posix.Unistd.nanosleep1
+                                 Animate.animate2
+                                 ipv2 of ds5 { (#,#) ipv4 ipv5 ->
+                          go ys ipv4 } } } } } } }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.<# 0# ww2) of wild1 {
+                   GHC.Types.False -> go (GHC.Types.[] @ GHC.Types.Double) w2
+                   GHC.Types.True
+                   -> case GHC.Prim./##
+                             (GHC.Prim.-## ww1 ww)
+                             (GHC.Prim.int2Double# (GHC.Prim.-# ww2 1#)) of wild3 { DEFAULT ->
+                      case GHC.Real.$wnumericEnumFromThen
+                             @ GHC.Types.Double
+                             GHC.Float.$fFractionalDouble
+                             (GHC.Types.D# ww)
+                             (GHC.Types.D# (GHC.Prim.+## ww wild3)) of ww3 { (#,#) ww4 ww5 ->
+                      go
+                        (GHC.List.$wunsafeTake
+                           @ GHC.Types.Double
+                           ww2
+                           (GHC.Types.: @ GHC.Types.Double ww4 ww5))
+                        w2 } } } }) -}
+32a14248a397cfa5c47f7e4ebb2b9152
+  animate ::
+    Render.Window
+    -> Signal.Time
+    -> Signal.Time
+    -> Signal.Signal Shapes.Drawing
+    -> GHC.Types.IO ()
+  {- Arity: 5,
+     Strictness: <L,U(U(U(U),U(U)),U(U(U),U(U)),U(U(U),U(U)))><S(S),1*U(U)><S(S),1*U(U)><L,C(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Animate.animate1
+                  `cast`
+                (<Render.Window>_R
+                 ->_R <Signal.Time>_R
+                 ->_R <Signal.Time>_R
+                 ->_R <Signal.Signal Shapes.Drawing>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+742ab061b8aabb24973eecb7ed01080b
+  animate1 ::
+    Render.Window
+    -> Signal.Time
+    -> Signal.Time
+    -> Signal.Signal Shapes.Drawing
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5,
+     Strictness: <L,U(U(U(U),U(U)),U(U(U),U(U)),U(U(U),U(U)))><S(S),1*U(U)><S(S),1*U(U)><L,C(U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, False)
+                (\ (w :: Render.Window)
+                   (w1 :: Signal.Time)
+                   (w2 :: Signal.Time)
+                   (w3 :: Signal.Signal Shapes.Drawing)
+                   (w4 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w1 of ww { GHC.Types.D# ww1 ->
+                 case w2 of ww2 { GHC.Types.D# ww3 ->
+                 Animate.$wanimate w ww1 ww3 w3 w4 } }) -}
+434b6eb3d0f25a37547472b340707f46
+  animate2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (70000000) -}
+f08283d54a2844490caf4c829998c4da
+  animate3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "\ESC[2J"#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

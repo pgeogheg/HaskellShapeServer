@@ -1,0 +1,736 @@
+
+==================== FINAL INTERFACE ====================
+2016-11-11 16:33:00.387563 UTC
+
+interface main@main:Ansi 8001
+  interface hash: a763c9422979e3b2bccdf9a89122191e
+  ABI hash: aa41b7576783b6f26dc4ff0677527cef
+  export-list hash: 07ee948a2c7e66974c9bb24793e9c44a
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 995a5ce452f5ac0b0a01a57b68a9fbe3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Ansi.cls
+  Ansi.color
+  Ansi.goto
+  Ansi.Colour{Ansi.Black Ansi.Blue Ansi.Cyan Ansi.Green Ansi.Magenta Ansi.Red Ansi.White Ansi.Yellow}
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Enum fdf7ac3e1b0be0a4a37257601bddad14
+import  -/  base-4.9.0.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:System.IO ad985d7a3fc986e9b9c610fb344d9106
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+4b461906bf4585d556096995d7041765
+  $fEnumColour :: GHC.Enum.Enum Ansi.Colour
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Ansi.Colour
+                  Ansi.$fEnumColour_$csucc
+                  Ansi.$fEnumColour_$cpred
+                  Ansi.$fEnumColour_$ctoEnum
+                  Ansi.$fEnumColour_$cfromEnum
+                  Ansi.$fEnumColour_$cenumFrom
+                  Ansi.$fEnumColour_$cenumFromThen
+                  Ansi.$fEnumColour_$cenumFromTo
+                  Ansi.$fEnumColour_$cenumFromThenTo -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour1 :: [Ansi.Colour]
+  {- Unfolding: (Ansi.$fEnumColour_go8 7#) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour10 :: Ansi.Colour
+  {- Strictness: x -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour11 :: Ansi.Colour
+  {- Strictness: x -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour2 :: [Ansi.Colour]
+  {- Unfolding: (Ansi.$fEnumColour_go9 6#) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour3 :: [Ansi.Colour]
+  {- Unfolding: (Ansi.$fEnumColour_go10 5#) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour4 :: [Ansi.Colour]
+  {- Unfolding: (Ansi.$fEnumColour_go11 4#) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour5 :: [Ansi.Colour]
+  {- Unfolding: (Ansi.$fEnumColour_go12 3#) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour6 :: [Ansi.Colour]
+  {- Unfolding: (Ansi.$fEnumColour_go13 2#) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour7 :: [Ansi.Colour]
+  {- Unfolding: (Ansi.$fEnumColour_go14 1#) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour8 :: [Ansi.Colour]
+  {- Unfolding: (Ansi.$fEnumColour_go15 0#) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour9 :: GHC.Prim.Int# -> Ansi.Colour
+  {- Arity: 1, Strictness: <L,U>x -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_$cenumFrom :: Ansi.Colour -> [Ansi.Colour]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (a :: Ansi.Colour) ->
+                 case a of wild {
+                   Ansi.Black -> Ansi.$fEnumColour8
+                   Ansi.Red -> Ansi.$fEnumColour7
+                   Ansi.Green -> Ansi.$fEnumColour6
+                   Ansi.Yellow -> Ansi.$fEnumColour5
+                   Ansi.Blue -> Ansi.$fEnumColour4
+                   Ansi.Magenta -> Ansi.$fEnumColour3
+                   Ansi.Cyan -> Ansi.$fEnumColour2
+                   Ansi.White -> Ansi.$fEnumColour1 }) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_$cenumFromThen ::
+    Ansi.Colour -> Ansi.Colour -> [Ansi.Colour]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Ansi.Colour) (b :: Ansi.Colour) ->
+                 let {
+                   $j :: GHC.Prim.Int# -> [Ansi.Colour]
+                     {- Arity: 1, Strictness: <S,U> -}
+                   = \ (a# :: GHC.Prim.Int#)[OneShot] ->
+                     let {
+                       $j1 :: GHC.Prim.Int# -> [Ansi.Colour]
+                         {- Arity: 1, Strictness: <S,U> -}
+                       = \ (b# :: GHC.Prim.Int#)[OneShot] ->
+                         let {
+                           $j2 :: GHC.Prim.Int# -> [Ansi.Colour]
+                             {- Arity: 1, Strictness: <S,U> -}
+                           = \ (y :: GHC.Prim.Int#)[OneShot] ->
+                             case GHC.Prim.tagToEnum#
+                                    @ GHC.Types.Bool
+                                    (GHC.Prim.>=# b# a#) of wild {
+                               GHC.Types.False
+                               -> GHC.Enum.efdtIntDnFB
+                                    @ [Ansi.Colour]
+                                    Ansi.$fEnumColour_c
+                                    (GHC.Types.[] @ Ansi.Colour)
+                                    a#
+                                    b#
+                                    y
+                               GHC.Types.True
+                               -> GHC.Enum.efdtIntUpFB
+                                    @ [Ansi.Colour]
+                                    Ansi.$fEnumColour_c
+                                    (GHC.Types.[] @ Ansi.Colour)
+                                    a#
+                                    b#
+                                    y }
+                         } in
+                         case GHC.Prim.tagToEnum#
+                                @ GHC.Types.Bool
+                                (GHC.Prim.># a# b#) of wild {
+                           GHC.Types.False -> $j2 7# GHC.Types.True -> $j2 0# }
+                     } in
+                     case b of wild {
+                       Ansi.Black -> $j1 0#
+                       Ansi.Red -> $j1 1#
+                       Ansi.Green -> $j1 2#
+                       Ansi.Yellow -> $j1 3#
+                       Ansi.Blue -> $j1 4#
+                       Ansi.Magenta -> $j1 5#
+                       Ansi.Cyan -> $j1 6#
+                       Ansi.White -> $j1 7# }
+                 } in
+                 case a of wild {
+                   Ansi.Black -> $j 0#
+                   Ansi.Red -> $j 1#
+                   Ansi.Green -> $j 2#
+                   Ansi.Yellow -> $j 3#
+                   Ansi.Blue -> $j 4#
+                   Ansi.Magenta -> $j 5#
+                   Ansi.Cyan -> $j 6#
+                   Ansi.White -> $j 7# }) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_$cenumFromThenTo ::
+    Ansi.Colour -> Ansi.Colour -> Ansi.Colour -> [Ansi.Colour]
+  {- Arity: 3, Strictness: <S,1*U><S,1*U><S,1*U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_$cenumFromTo ::
+    Ansi.Colour -> Ansi.Colour -> [Ansi.Colour]
+  {- Arity: 2, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (x :: Ansi.Colour) (y :: Ansi.Colour) ->
+                 let {
+                   $j :: GHC.Prim.Int# -> [Ansi.Colour]
+                     {- Arity: 1, Strictness: <S,U> -}
+                   = \ (x1 :: GHC.Prim.Int#)[OneShot] ->
+                     case y of wild {
+                       Ansi.Black
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 0#) of wild1 {
+                            GHC.Types.False -> Ansi.$fEnumColour_go7 x1
+                            GHC.Types.True -> GHC.Types.[] @ Ansi.Colour }
+                       Ansi.Red
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 1#) of wild1 {
+                            GHC.Types.False -> Ansi.$fEnumColour_go6 x1
+                            GHC.Types.True -> GHC.Types.[] @ Ansi.Colour }
+                       Ansi.Green
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 2#) of wild1 {
+                            GHC.Types.False -> Ansi.$fEnumColour_go5 x1
+                            GHC.Types.True -> GHC.Types.[] @ Ansi.Colour }
+                       Ansi.Yellow
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 3#) of wild1 {
+                            GHC.Types.False -> Ansi.$fEnumColour_go4 x1
+                            GHC.Types.True -> GHC.Types.[] @ Ansi.Colour }
+                       Ansi.Blue
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 4#) of wild1 {
+                            GHC.Types.False -> Ansi.$fEnumColour_go3 x1
+                            GHC.Types.True -> GHC.Types.[] @ Ansi.Colour }
+                       Ansi.Magenta
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 5#) of wild1 {
+                            GHC.Types.False -> Ansi.$fEnumColour_go2 x1
+                            GHC.Types.True -> GHC.Types.[] @ Ansi.Colour }
+                       Ansi.Cyan
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 6#) of wild1 {
+                            GHC.Types.False -> Ansi.$fEnumColour_go1 x1
+                            GHC.Types.True -> GHC.Types.[] @ Ansi.Colour }
+                       Ansi.White
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 7#) of wild1 {
+                            GHC.Types.False -> Ansi.$fEnumColour_go x1
+                            GHC.Types.True -> GHC.Types.[] @ Ansi.Colour } }
+                 } in
+                 case x of wild {
+                   Ansi.Black -> $j 0#
+                   Ansi.Red -> $j 1#
+                   Ansi.Green -> $j 2#
+                   Ansi.Yellow -> $j 3#
+                   Ansi.Blue -> $j 4#
+                   Ansi.Magenta -> $j 5#
+                   Ansi.Cyan -> $j 6#
+                   Ansi.White -> $j 7# }) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_$cfromEnum :: Ansi.Colour -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Ansi.Colour) ->
+                 case w of wild {
+                   Ansi.Black -> GHC.Types.I# 0#
+                   Ansi.Red -> GHC.Types.I# 1#
+                   Ansi.Green -> GHC.Types.I# 2#
+                   Ansi.Yellow -> GHC.Types.I# 3#
+                   Ansi.Blue -> GHC.Types.I# 4#
+                   Ansi.Magenta -> GHC.Types.I# 5#
+                   Ansi.Cyan -> GHC.Types.I# 6#
+                   Ansi.White -> GHC.Types.I# 7# }) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_$cpred :: Ansi.Colour -> Ansi.Colour
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (a :: Ansi.Colour) ->
+                 case a of wild {
+                   Ansi.Black -> Ansi.$fEnumColour10
+                   Ansi.Red -> Ansi.Black
+                   Ansi.Green -> Ansi.Red
+                   Ansi.Yellow -> Ansi.Green
+                   Ansi.Blue -> Ansi.Yellow
+                   Ansi.Magenta -> Ansi.Blue
+                   Ansi.Cyan -> Ansi.Magenta
+                   Ansi.White -> Ansi.Cyan }) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_$csucc :: Ansi.Colour -> Ansi.Colour
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (a :: Ansi.Colour) ->
+                 case a of wild {
+                   Ansi.Black -> Ansi.Red
+                   Ansi.Red -> Ansi.Green
+                   Ansi.Green -> Ansi.Yellow
+                   Ansi.Yellow -> Ansi.Blue
+                   Ansi.Blue -> Ansi.Magenta
+                   Ansi.Magenta -> Ansi.Cyan
+                   Ansi.Cyan -> Ansi.White
+                   Ansi.White -> Ansi.$fEnumColour11 }) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_$ctoEnum :: GHC.Types.Int -> Ansi.Colour
+  {- Arity: 1, Strictness: <S(S),1*U(U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Types.Int) ->
+                 case w of ww { GHC.Types.I# ww1 -> Ansi.$w$ctoEnum ww1 }) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_c :: GHC.Types.Int -> [Ansi.Colour] -> [Ansi.Colour]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: GHC.Types.Int) (ys :: [Ansi.Colour]) ->
+                 GHC.Types.:
+                   @ Ansi.Colour
+                   (case x of wild { GHC.Types.I# a ->
+                    GHC.Prim.tagToEnum# @ Ansi.Colour a })
+                   ys) -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go1 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go10 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go11 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go12 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go13 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go14 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go15 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go2 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go3 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go4 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go5 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go6 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go7 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go8 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEnumColour_go9 :: GHC.Prim.Int# -> [Ansi.Colour]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+4b461906bf4585d556096995d7041765
+  $fEqColour :: GHC.Classes.Eq Ansi.Colour
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Ansi.Colour Ansi.$fEqColour_$c== Ansi.$fEqColour_$c/= -}
+4b461906bf4585d556096995d7041765
+  $fEqColour_$c/= :: Ansi.Colour -> Ansi.Colour -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Ansi.Colour) (b :: Ansi.Colour) ->
+                 case a of wild {
+                   Ansi.Black
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Ansi.Black -> GHC.Types.False }
+                   Ansi.Red
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Ansi.Red -> GHC.Types.False }
+                   Ansi.Green
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Ansi.Green -> GHC.Types.False }
+                   Ansi.Yellow
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Ansi.Yellow -> GHC.Types.False }
+                   Ansi.Blue
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Ansi.Blue -> GHC.Types.False }
+                   Ansi.Magenta
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Ansi.Magenta -> GHC.Types.False }
+                   Ansi.Cyan
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Ansi.Cyan -> GHC.Types.False }
+                   Ansi.White
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Ansi.White -> GHC.Types.False } }) -}
+4b461906bf4585d556096995d7041765
+  $fEqColour_$c== :: Ansi.Colour -> Ansi.Colour -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Ansi.Colour) (ds1 :: Ansi.Colour) ->
+                 case ds of wild {
+                   Ansi.Black
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Ansi.Black -> GHC.Types.True }
+                   Ansi.Red
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Ansi.Red -> GHC.Types.True }
+                   Ansi.Green
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Ansi.Green -> GHC.Types.True }
+                   Ansi.Yellow
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Ansi.Yellow -> GHC.Types.True }
+                   Ansi.Blue
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Ansi.Blue -> GHC.Types.True }
+                   Ansi.Magenta
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Ansi.Magenta -> GHC.Types.True }
+                   Ansi.Cyan
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Ansi.Cyan -> GHC.Types.True }
+                   Ansi.White
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Ansi.White -> GHC.Types.True } }) -}
+4b461906bf4585d556096995d7041765
+  $fShowColour :: GHC.Show.Show Ansi.Colour
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Ansi.Colour
+                  Ansi.$fShowColour_$cshowsPrec
+                  Ansi.$fShowColour_$cshow
+                  Ansi.$fShowColour_$cshowList -}
+317664f5a1542b867d541f8ec2797e3e
+  $fShowColour1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "White"#) -}
+849eb7187dd543ef0f8c95ed5257a572
+  $fShowColour2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Cyan"#) -}
+bc3b3780b0b3aed8dd00aa29a4883bd7
+  $fShowColour3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Magenta"#) -}
+7da6ccbd7515c6c2644f9ad6255b6644
+  $fShowColour4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Blue"#) -}
+46b7caa55004ae72b96ebef6f3db8942
+  $fShowColour5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Yellow"#) -}
+56efa450d32a56a64cbe10df0d94807f
+  $fShowColour6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Green"#) -}
+729c125b1bc63c02bb584e0e6972e6ed
+  $fShowColour7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Red"#) -}
+7ebefc3b8d4368640e4eaa88b30e1b20
+  $fShowColour8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Black"#) -}
+4b461906bf4585d556096995d7041765
+  $fShowColour_$cshow :: Ansi.Colour -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Ansi.Colour) ->
+                 Ansi.$fShowColour_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+4b461906bf4585d556096995d7041765
+  $fShowColour_$cshowList :: [Ansi.Colour] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Ansi.Colour
+                   Ansi.$w$cshowsPrec) -}
+4b461906bf4585d556096995d7041765
+  $fShowColour_$cshowsPrec ::
+    GHC.Types.Int -> Ansi.Colour -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Ansi.Colour)
+                   (w2 :: GHC.Base.String) ->
+                 Ansi.$w$cshowsPrec w1 w2) -}
+8ddcbfc2b64e3dba7175b56ca0ef6466
+  $tc'Black :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2538403611705503441##
+                   15062612368414564924##
+                   Ansi.$trModule
+                   Ansi.$tc'Black1) -}
+86af269d863b0c69ad18bfe985964a41
+  $tc'Black1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Black"#) -}
+f0a8ab390dc715eb08dab8fdbe5f528d
+  $tc'Blue :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17513947187299862833##
+                   18179636757917866257##
+                   Ansi.$trModule
+                   Ansi.$tc'Blue1) -}
+e9663afcb31198187ced08d9c7dc76e5
+  $tc'Blue1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Blue"#) -}
+b0349ed0d0209a93e078afae6e129960
+  $tc'Cyan :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5727757910478823119##
+                   3843568398532236146##
+                   Ansi.$trModule
+                   Ansi.$tc'Cyan1) -}
+dd73da761707c8452255db96bdef0bf7
+  $tc'Cyan1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Cyan"#) -}
+66e0f507dfebef1217f849ac9ae3af87
+  $tc'Green :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7678159452951668094##
+                   7100340767030969124##
+                   Ansi.$trModule
+                   Ansi.$tc'Green1) -}
+22c93f89fd0a1d29b84e9bdad0445bbf
+  $tc'Green1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Green"#) -}
+97f42d71989d6ddbe70ceb2a5a2e6283
+  $tc'Magenta :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17117514118706556409##
+                   3507995699627677644##
+                   Ansi.$trModule
+                   Ansi.$tc'Magenta1) -}
+2fa29a3c2efa8b0acae90bfe67d10831
+  $tc'Magenta1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Magenta"#) -}
+073f1398617d06473255e89d891ae14c
+  $tc'Red :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6501434369835715863##
+                   4158330423232563554##
+                   Ansi.$trModule
+                   Ansi.$tc'Red1) -}
+d2b865ce1d20fe2cf152f3accffdc98d
+  $tc'Red1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Red"#) -}
+ef4f5b34cfec612edd110de0f0e51701
+  $tc'White :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7217902738340962537##
+                   6910641598634481633##
+                   Ansi.$trModule
+                   Ansi.$tc'White1) -}
+726787782bd5b965697b6ef2c152e736
+  $tc'White1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'White"#) -}
+f7ee6289fccccfe02a4c1bb02b13d470
+  $tc'Yellow :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9858436225734851755##
+                   10433455061047121227##
+                   Ansi.$trModule
+                   Ansi.$tc'Yellow1) -}
+1fcf8b953fd6770ba555cedfbe41ed5f
+  $tc'Yellow1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Yellow"#) -}
+4307291cb5fd5cc1d87bb726c4e5c885
+  $tcColour :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6403345980151145136##
+                   7282042152044359260##
+                   Ansi.$trModule
+                   Ansi.$tcColour1) -}
+0088cfae571bdf7f33517e10de6bb517
+  $tcColour1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Colour"#) -}
+10aa817eaaa02dd7ac08985b8df336c2
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Ansi.$trModule2 Ansi.$trModule1) -}
+3c9df9607856471897da7d1e47c23029
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Ansi"#) -}
+dfccf8b8ed9ba447a161bd6b697748fe
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+4b461906bf4585d556096995d7041765
+  $w$cshowsPrec :: Ansi.Colour -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (w :: Ansi.Colour) (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   Ansi.Black -> GHC.Base.++ @ GHC.Types.Char Ansi.$fShowColour8 w1
+                   Ansi.Red -> GHC.Base.++ @ GHC.Types.Char Ansi.$fShowColour7 w1
+                   Ansi.Green -> GHC.Base.++ @ GHC.Types.Char Ansi.$fShowColour6 w1
+                   Ansi.Yellow -> GHC.Base.++ @ GHC.Types.Char Ansi.$fShowColour5 w1
+                   Ansi.Blue -> GHC.Base.++ @ GHC.Types.Char Ansi.$fShowColour4 w1
+                   Ansi.Magenta -> GHC.Base.++ @ GHC.Types.Char Ansi.$fShowColour3 w1
+                   Ansi.Cyan -> GHC.Base.++ @ GHC.Types.Char Ansi.$fShowColour2 w1
+                   Ansi.White
+                   -> GHC.Base.++ @ GHC.Types.Char Ansi.$fShowColour1 w1 }) -}
+4b461906bf4585d556096995d7041765
+  $w$ctoEnum :: GHC.Prim.Int# -> Ansi.Colour
+  {- Arity: 1, Strictness: <S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 0#) of wild {
+                   GHC.Types.False -> Ansi.$fEnumColour9 ww
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# ww 7#) of wild1 {
+                        GHC.Types.False -> Ansi.$fEnumColour9 ww
+                        GHC.Types.True -> GHC.Prim.tagToEnum# @ Ansi.Colour ww } }) -}
+4b461906bf4585d556096995d7041765
+  data Colour
+    = Black | Red | Green | Yellow | Blue | Magenta | Cyan | White
+5565529d0651e0fc65c2a18ddccf061d
+  cls :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Ansi.cls1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+f52553f568bb34d5bb65a28c6ccca6c0
+  cls1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b -> GHC.CString.unpackFoldrCString# @ b "\ESC[2J"#))
+                   GHC.Types.False
+                   eta) -}
+d0fa06f2c93ff0951bbb3bd81718c819
+  color :: Ansi.Colour -> GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,1*U><L,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Ansi.color1
+                  `cast`
+                (<Ansi.Colour>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+9ed6c4e250a3b1a53f4f218c171079c0
+  color1 ::
+    Ansi.Colour
+    -> GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,1*U><L,1*U><S,U>,
+     Unfolding: (\ (c1 :: Ansi.Colour)
+                   (s :: GHC.Base.String)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (GHC.CString.unpackAppendCString#
+                      "\ESC[3"#
+                      (let {
+                         $j :: GHC.Prim.Int# -> [GHC.Types.Char]
+                           {- Arity: 1, Strictness: <S,U> -}
+                         = \ (ww3 :: GHC.Prim.Int#)[OneShot] ->
+                           case GHC.Show.$wshowSignedInt
+                                  0#
+                                  ww3
+                                  (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                           GHC.Base.++
+                             @ GHC.Types.Char
+                             (GHC.Types.: @ GHC.Types.Char ww5 ww6)
+                             (GHC.CString.unpackAppendCString#
+                                "m"#
+                                (GHC.Base.++ @ GHC.Types.Char s Ansi.color2)) }
+                       } in
+                       case c1 of wild {
+                         Ansi.Black -> $j 0#
+                         Ansi.Red -> $j 1#
+                         Ansi.Green -> $j 2#
+                         Ansi.Yellow -> $j 3#
+                         Ansi.Blue -> $j 4#
+                         Ansi.Magenta -> $j 5#
+                         Ansi.Cyan -> $j 6#
+                         Ansi.White -> $j 7# }))
+                   GHC.Types.False
+                   eta) -}
+a8d3e6fa62e563df2332bd291cdd9c08
+  color2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "\ESC[0m"#) -}
+e5002c2ee5da38b235f752f29c2e0475
+  goto :: GHC.Types.Int -> GHC.Types.Int -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,1*U(U)><L,1*U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Ansi.goto1
+                  `cast`
+                (<GHC.Types.Int>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+217fbab3434e09f6b16a20cfa3957a62
+  goto1 ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,1*U(U)><L,1*U(U)><S,U>,
+     Unfolding: (\ (x :: GHC.Types.Int)
+                   (y :: GHC.Types.Int)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (GHC.CString.unpackAppendCString#
+                      "\ESC["#
+                      (case y of ww2 { GHC.Types.I# ww3 ->
+                       case GHC.Show.$wshowSignedInt
+                              0#
+                              ww3
+                              (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                       GHC.Base.++
+                         @ GHC.Types.Char
+                         (GHC.Types.: @ GHC.Types.Char ww5 ww6)
+                         (GHC.CString.unpackAppendCString#
+                            ";"#
+                            (case x of ww1 { GHC.Types.I# ww8 ->
+                             case GHC.Show.$wshowSignedInt
+                                    0#
+                                    ww8
+                                    (GHC.Types.[] @ GHC.Types.Char) of ww9 { (#,#) ww10 ww11 ->
+                             GHC.Base.++
+                               @ GHC.Types.Char
+                               (GHC.Types.: @ GHC.Types.Char ww10 ww11)
+                               Ansi.goto2 } })) } }))
+                   GHC.Types.False
+                   eta) -}
+8777cacd4e8475af0c911dde972c144c
+  goto2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "H"#) -}
+instance [safe] GHC.Enum.Enum [Ansi.Colour] = Ansi.$fEnumColour
+instance [safe] GHC.Classes.Eq [Ansi.Colour] = Ansi.$fEqColour
+instance [safe] GHC.Show.Show [Ansi.Colour] = Ansi.$fShowColour
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
