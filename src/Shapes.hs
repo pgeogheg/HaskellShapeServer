@@ -1,5 +1,5 @@
 module Shapes(
-  Shape(..), Point(..), Vector(..), Transform(..), 
+  Shape(..), Point(..), Vector(..), Transform(..),
   Drawing(..), Style(..), Colour(..), Stylesheet(..),
   Frame(..), Matrix(..),
   point, getX, getY,
@@ -9,7 +9,8 @@ module Shapes(
 
 -- Utilities
 
-data Colour = Colour Int Int Int -- R,G,B format
+data Colour = Colour Int Int Int
+              deriving (Show, Read)
 
 type Stylesheet = [Style]
 
@@ -19,9 +20,10 @@ data Style = None
             |StrokeWidth Int
             |StrokeColour Colour
             |FillColour Colour
+            deriving (Show, Read)
 
 data Vector = Vector Double Double
-              deriving Show
+              deriving (Show, Read)
 vector = Vector
 
 cross :: Vector -> Vector -> Double
@@ -33,10 +35,10 @@ mult (Matrix r0 r1) v = Vector (cross r0 v) (cross r1 v)
 invert :: Matrix -> Matrix
 invert (Matrix (Vector a b) (Vector c d)) = matrix (d / k) (-b / k) (-c / k) (a / k)
   where k = a * d - b * c
-        
+
 -- 2x2 square matrices are all we need.
 data Matrix = Matrix Vector Vector
-              deriving Show
+              deriving (Show, Read)
 
 matrix :: Double -> Double -> Double -> Double -> Matrix
 matrix a b c d = Matrix (Vector a b) (Vector c d)
@@ -51,10 +53,10 @@ type Point  = Vector
 point :: Double -> Double -> Point
 point = vector
 
-data Shape = Empty 
-           | Circle 
-           | Square 
-             deriving Show
+data Shape = Empty
+           | Circle
+           | Square
+             deriving (Show, Read)
 
 empty, circle, square :: Shape
 
@@ -69,7 +71,7 @@ data Transform = Identity
            | Scale Vector
            | Compose Transform Transform
            | Rotate Matrix
-             deriving Show
+             deriving (Show, Read)
 
 identity = Identity
 translate = Translate

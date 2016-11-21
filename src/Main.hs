@@ -13,26 +13,27 @@ import Web.Scotty
 import qualified Data.Text.Lazy as L
 
 test :: Int -> Drawing
-test i 	| i == 1 = [(Compose (Scale (Vector 2 2)) (Translate (Vector 5 5)), Circle, [FillColour (Colour 255 0 0), StrokeWidth 2])]
-		| i == 2 = [(Identity, Empty, [None])]
+test i
+	| i == 1 = [(Compose (Scale (Vector 2 2)) (Translate (Vector 5 5)), Circle, [FillColour (Colour 255 0 0), StrokeWidth 2])]
+	| i == 2 = [(Identity, Empty, [None])]
 
 main :: IO ()
 main = scotty 3000 $ do
 	let c = L.pack (renderSvg $ interpretDrawing (test 1))
-	get "/" $ do 
-		html c
-		webForm
+	get "/" $ do
+		file "src/homepage.html"
 
-	get "/shape/:text" $ do
-		text <- param "text"
-		html text
+	post "/display_result" $ do
+		details <- param "shape_input"
+		let shapeDrawing = read details :: [(Transform, Shape, Stylesheet)]
+		html $ L.pack $ renderSvg $ interpretDrawing $ shapeDrawing
 
 ---------------------
 --   Web Service   --
 ---------------------
 
-webForm :: ActionM ()
-webForm = do html $ L.pack "<form action=\"/shape/\" method=\"POST\">First name:<br><input type=\"text\" name=\"firstname\" value=\"Mickey\"><br>Last name:<br><input type=\"text\" name=\"lastname\" value=\"Mouse\"><br><br><input type=\"submit\" value=\"Submit\"></form>"
+webOutput :: L.Text -> String
+webOutput input = "<p>" ++ L.unpack input ++ "</p>"
 
 ---------------------
 -- SVG Interpreter --
@@ -46,7 +47,7 @@ runSvgs :: [S.Svg] -> S.Svg
 runSvgs svgs = foldl1 (>>) svgs
 
 interpretFrame :: Frame -> S.Svg
-interpretFrame (trans, shape, style) 
+interpretFrame (trans, shape, style)
 	| null (interpretTransforms trans) && length (interpretStylesheet style) > 0		= foldl (!) (fromJust (interpretShape shape)) (interpretStylesheet style)
 	| length (interpretTransforms trans) > 0 && length (interpretStylesheet style) > 0 	= foldl (!) (foldl (!) (fromJust (interpretShape shape)) (interpretTransforms trans)) (interpretStylesheet style)
 	| length (interpretTransforms trans) > 0 && null (interpretStylesheet style) 		= foldl (!) (fromJust (interpretShape shape)) (interpretTransforms trans)

@@ -29,11 +29,11 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/Users/GDev/Desktop/CS4012 - Topics in Functional Programming/shape-server/.stack-work/install/x86_64-osx/lts-7.8/8.0.1/bin"
-libdir     = "/Users/GDev/Desktop/CS4012 - Topics in Functional Programming/shape-server/.stack-work/install/x86_64-osx/lts-7.8/8.0.1/lib/x86_64-osx-ghc-8.0.1/shape-server-0.1.0.0"
-datadir    = "/Users/GDev/Desktop/CS4012 - Topics in Functional Programming/shape-server/.stack-work/install/x86_64-osx/lts-7.8/8.0.1/share/x86_64-osx-ghc-8.0.1/shape-server-0.1.0.0"
-libexecdir = "/Users/GDev/Desktop/CS4012 - Topics in Functional Programming/shape-server/.stack-work/install/x86_64-osx/lts-7.8/8.0.1/libexec"
-sysconfdir = "/Users/GDev/Desktop/CS4012 - Topics in Functional Programming/shape-server/.stack-work/install/x86_64-osx/lts-7.8/8.0.1/etc"
+bindir     = "/Users/GDev/Desktop/CS4012 - Topics in Functional Programming/.stack-work/install/x86_64-osx/lts-7.9/8.0.1/bin"
+libdir     = "/Users/GDev/Desktop/CS4012 - Topics in Functional Programming/.stack-work/install/x86_64-osx/lts-7.9/8.0.1/lib/x86_64-osx-ghc-8.0.1/shape-server-0.1.0.0"
+datadir    = "/Users/GDev/Desktop/CS4012 - Topics in Functional Programming/.stack-work/install/x86_64-osx/lts-7.9/8.0.1/share/x86_64-osx-ghc-8.0.1/shape-server-0.1.0.0"
+libexecdir = "/Users/GDev/Desktop/CS4012 - Topics in Functional Programming/.stack-work/install/x86_64-osx/lts-7.9/8.0.1/libexec"
+sysconfdir = "/Users/GDev/Desktop/CS4012 - Topics in Functional Programming/.stack-work/install/x86_64-osx/lts-7.9/8.0.1/etc"
 
 getBinDir, getLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "shape_server_bindir") (\_ -> return bindir)
